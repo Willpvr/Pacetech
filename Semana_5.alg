@@ -1,5 +1,5 @@
 algoritmo "Conversor Temperatura"
-// FunÁ„o : Converter temperatura de Celsius para Fahrenheit ou Fahrenheit para Celsius
+// Fun√ß√£o : Converter temperatura de Celsius para Fahrenheit ou Fahrenheit para Celsius
 // Autor :Willyam Patrick Vargas Ribeiro
 // Data : 17/11/2022
 
@@ -18,7 +18,6 @@ procedimento mostrarMenu ()
     Escreval ("3 - Finalizar/Sair")
     leia (opcaoMenu)
   fimprocedimento
-  
 
 inicio
 
@@ -28,27 +27,30 @@ escolha opcaoMenu
 
 caso "1"
    para i de 1 ate 4 faca
-      Escreval ("Insira o hor·rio")
+      Escreval ("Insira o hor√°rio", i)
       leia (horario[i])
-      Escreval("Informe temperatura")
+      Escreval("Informe temperatura", i)
       leia (temperatura [i])
             temperaturaFahrenheit <- (temperatura[i] * 9/5) + 32
-   Escreval ("A temperatura em graus Fahrenheit È de: ", temperaturaFahrenheit:1:2)
+   Escreval ("A temperatura em graus Fahrenheit √© de: ", temperaturaFahrenheit:1:2)
    Escreval ("")
    limpatela
 fimpara
 
 caso "2"
 para i de 1 ate 4 faca
-      Escreval ("Insira o hor·rio")
+      Escreval ("Insira o hor√°rio", i)
       leia (horario[i])
-      Escreval("Informe temperatura")
+      Escreval("Informe temperatura", i)
       leia (temperatura [i])
             temperaturaCelsius <-  (temperatura[i] - 32) / 1.8
-   Escreval ("A temperatura em graus Celsius È de: ", temperaturaCelsius:1:2)
+   Escreval ("A temperatura em graus Celsius √© de: ", temperaturaCelsius:1:2)
    Escreval ("")
    limpatela
 fimpara
+       caso "3"
+       Escreval ("Tchau/ Bye")
+       
        para i de 1 ate 4 faca
        para j de 1 ate 4 faca
           se temperatura[j] > temperatura[i] entao
@@ -57,14 +59,12 @@ fimpara
           temperatura[j] <- aux
           fimse
        fimpara
-       fimpara
+fimpara
 
 outrocaso
-Escreval ("OpÁ„o Invalida")
+Escreval ("Op√ß√£o Inv√°lida")
 fimescolha
 
 ate opcaoMenu = "3"
 
-
-
-   fimalgoritmo
+fimalgoritmo
